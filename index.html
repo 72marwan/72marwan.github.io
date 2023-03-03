@@ -156,8 +156,24 @@
       }catch(err){}
   }
 </script>
-
-
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'hi',
+      defaultLanguage: 'hi',
+      autoDisplay: false,
+      gaTrack: true,
+      gaId: 'UA-123456-1'
+    }, 'google_translate_element');
+    
+    // Automatically translate the page to Hindi
+    var translator = new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi', defaultLanguage: 'hi'}, 'google_translate_element');
+    translator.translatePage();
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
   // init CC Analytics
   window.CC = { Class: {} };
@@ -198,6 +214,8 @@
           <button data-name="LARGE_UP_MAIN_NAV_TRIGGER" class="hidden weight-semi large-up-block text-1 color-charcoal padding-right-small" type="button">
            sss
           </button>
+<div id="google_translate_element" style="display:none"></div>
+
           <nav class="main-nav-dropdown js-main-nav-dropdown">
   <div class="main-nav-dropdown__index">
   <div class="main-nav-dropdown__header large-up-hidden">
